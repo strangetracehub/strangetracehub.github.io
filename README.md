@@ -1,48 +1,48 @@
 # Strange Trace
 
-**Strange Trace** — провокационный анонимный маркетплейс, где пользователи могут покупать и продавать ношеное нижнее белье. Платформа создается с прицелом на приватность, безопасность и удобство обеих сторон сделки.
+**Strange Trace** is a provocative anonymous marketplace where users can buy and sell worn underwear. The platform is designed with a focus on privacy, safety, and convenience for both buyers and sellers.
 
-## О проекте
+## About the Project
 
-Strange Trace — это место, где табу превращается в функционал. Здесь сочетаются:
-- Полная анонимность пользователей
-- Механизмы безопасной оплаты и доставки
-- Минималистичный, но выразительный интерфейс
-- Возможность вести диалоги и накапливать репутацию
+Strange Trace turns taboo into functionality. Key features include:
+- Full user anonymity
+- Secure payment and delivery mechanisms
+- Minimal yet expressive user interface
+- Messaging system and reputation tracking
 
-## Что уже реализовано
+## What's Done
 
-- Стартовая HTML-страница проекта
-- Публичный репозиторий на GitHub
-- План архитектуры и логики взаимодействия пользователей
+- Initial HTML project page
+- Public GitHub repository created
+- Project logic and architecture outlined
 
-## В планах
+## Roadmap
 
-- Разработка системы профилей и регистрации
-- Внедрение чат-мессенджера между пользователями
-- Система публикации и модерации объявлений
-- Интеграция платёжных решений (PayPal, крипта и др.)
-- Адаптация под мобильные устройства
+- User profile and registration system
+- Built-in chat between buyers and sellers
+- Listing and moderation system
+- Payment integration (PayPal, crypto, etc.)
+- Mobile-friendly layout
 
-## Используемые технологии
+## Tech Stack
 
 - HTML / CSS (Frontend MVP)
-- JavaScript (Frontend логика)
-- Node.js или Python (в перспективе — Backend)
-- GitHub Pages / Netlify (деплой)
+- JavaScript (Frontend logic)
+- Node.js or Python (Backend, planned)
+- GitHub Pages / Netlify (for deployment)
 
-## Как начать
+## Getting Started
 
-1. Клонируй репозиторий:
+1. Clone the repository:
    ```bash
    git clone https://github.com/strangetracehub/Strange-trace.git
    ```
-2. Открой `strange_trace.html` в браузере.
+2. Open `strange_trace.html` in your browser.
 
-## Примечание
+## Disclaimer
 
-Проект содержит взрослый контент и предназначен исключительно для совершеннолетних пользователей. Все участники обязаны соблюдать законы своей страны.
+This project includes adult content and is intended for users aged 18 and older. All participants must comply with the laws of their respective countries.
 
 ---
 
-**Strange Trace** — если след невидим, это не значит, что его не существует.
+**Strange Trace** — just because the trace is invisible, doesn't mean it isn't there.
