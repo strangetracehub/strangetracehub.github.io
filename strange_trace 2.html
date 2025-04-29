@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Strange Trace</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fafafa;
+      color: #333;
+    }
+
+    header {
+      background-color: #0f0f0f;
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1c1c1c;
+      padding: 0.5rem 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      padding: 0.5rem;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #333;
+      border-radius: 5px;
+    }
+
+    .hero {
+      padding: 3rem 2rem;
+      background: #fff;
+      text-align: center;
+    }
+
+    .hero h1 {
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    .cta-button {
+      background-color: #111;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+      text-decoration: none;
+    }
+
+    .cta-button:hover {
+      background-color: #333;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+      background-color: #f4f4f4;
+    }
+
+    .feature {
+      max-width: 250px;
+      text-align: center;
+    }
+
+    .feature h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #1c1c1c;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Strange Trace</h1>
+  <p>Anonymous. Intimate. Discreet.</p>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#">Browse</a>
+  <a href="#">Sell</a>
+  <a href="#">Messages</a>
+  <a href="#">Login</a>
+</nav>
+
+<section class="hero">
+  <h1>Welcome to Strange Trace</h1>
+  <p>The ultimate marketplace for buying and selling worn underwear — safely and anonymously.</p>
+  <a href="#" class="cta-button">Start Exploring</a>
+</section>
+
+<section class="features">
+  <div class="feature">
+    <h3>Anonymous Profiles</h3>
+    <p>Register without showing your face or identity. Your privacy is our priority.</p>
+  </div>
+  <div class="feature">
+    <h3>Secure Messaging</h3>
+    <p>Talk privately with buyers or sellers through our built-in encrypted chat.</p>
+  </div>
+  <div class="feature">
+    <h3>Easy Listings</h3>
+    <p>Create, manage, and promote your offers with just a few clicks.</p>
+  </div>
+  <div class="feature">
+    <h3>Verified Community</h3>
+    <p>All users are reviewed and flagged content is removed swiftly.</p>
+  </div>
+
+</section>
+
+<section class="hero" style="background-color: #fff;">
+  <h2>Login</h2>
+  <form style="max-width: 400px; margin: 0 auto; text-align: left;">
+    <label for="login-email">Email:</label><br/>
+    <input type="email" id="login-email" name="login-email" style="width:100%; padding:0.5rem; margin-bottom:1rem;" required><br/>
+    <label for="login-password">Password:</label><br/>
+    <input type="password" id="login-password" name="login-password" style="width:100%; padding:0.5rem; margin-bottom:1rem;" required><br/>
+    <button type="submit" class="cta-button" style="width:100%;">Login</button>
+  </form>
+</section>
+
+<section class="hero" style="background-color: #f4f4f4;">
+  <h2>Register</h2>
+  <form style="max-width: 400px; margin: 0 auto; text-align: left;">
+    <label for="register-username">Username:</label><br/>
+    <input type="text" id="register-username" name="register-username" style="width:100%; padding:0.5rem; margin-bottom:1rem;" required><br/>
+    <label for="register-email">Email:</label><br/>
+    <input type="email" id="register-email" name="register-email" style="width:100%; padding:0.5rem; margin-bottom:1rem;" required><br/>
+    <label for="register-password">Password:</label><br/>
+    <input type="password" id="register-password" name="register-password" style="width:100%; padding:0.5rem; margin-bottom:1rem;" required><br/>
+    <button type="submit" class="cta-button" style="width:100%;">Create Account</button>
+  </form>
+</section>
+
+
+
+<section class="hero" style="background-color: #f4f4f4;">
+  <h2>Sell an Item</h2>
+  <p style="text-align: center;">List your worn item with a photo, description, and price.</p>
+  <form style="max-width: 600px; margin: 0 auto; text-align: left;" enctype="multipart/form-data">
+    <label for="item-title">Title:</label><br/>
+    <input type="text" id="item-title" name="item-title" style="width:100%; padding:0.5rem; margin-bottom:1rem;" required><br/>
+    
+    <label for="item-description">Description:</label><br/>
+    <textarea id="item-description" name="item-description" rows="4" style="width:100%; padding:0.5rem; margin-bottom:1rem;" required></textarea><br/>
+    
+    <label for="item-price">Price (USD):</label><br/>
+    <input type="number" id="item-price" name="item-price" min="1" style="width:100%; padding:0.5rem; margin-bottom:1rem;" required><br/>
+    
+    <label for="item-photo">Upload Photo:</label><br/>
+    <input type="file" id="item-photo" name="item-photo" accept="image/*" style="margin-bottom:1rem;" required><br/>
+
+    <button type="submit" class="cta-button" style="width:100%;">Post Listing</button>
+  </form>
+</section>
+
+<section class="hero" style="background-color: #fff;">
+  <h2>Community Forum</h2>
+  <p>Share your thoughts, ask questions, or connect with other users.</p>
+  <div style="max-width: 800px; margin: 2rem auto; background: #f0f0f0; padding: 1rem; border-radius: 5px;">
+    <form>
+      <label for="forum-post">New Post:</label><br/>
+      <textarea id="forum-post" name="forum-post" rows="4" style="width:100%; padding:0.5rem;" placeholder="What's on your mind?" required></textarea><br/>
+      <button type="submit" class="cta-button" style="margin-top: 1rem;">Post</button>
+    </form>
+    <hr style="margin: 2rem 0;">
+    <div>
+      <h4>User123:</h4>
+      <p>What's the best way to ship discreetly?</p>
+    </div>
+    <div>
+      <h4>SellerX:</h4>
+      <p>I recommend vacuum sealing with a plain envelope. Totally safe.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Strange Trace &copy; 2025. Adults 18+ only. Use responsibly and follow local laws.</p>
+</footer>
+
+
+<!-- Modal -->
+<div id="buyModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); align-items:center; justify-content:center;">
+  <div style="background:#fff; padding:2rem; border-radius:10px; max-width:400px; width:90%; text-align:center; position:relative;">
+    <h3>Confirm Purchase</h3>
+    <p>Are you sure you want to buy this item?</p>
+    <button onclick="confirmBuy()" class="cta-button" style="margin:1rem;">Yes, Buy</button>
+    <button onclick="closeModal()" class="cta-button" style="background:#bbb;">Cancel</button>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById("buyModal");
+  const buyButtons = document.querySelectorAll(".cta-button");
+
+  buyButtons.forEach(btn => {
+    if (btn.textContent.includes("Buy Now")) {
+      btn.addEventListener("click", function(e) {
+        e.preventDefault();
+        modal.style.display = "flex";
+      });
+    }
+  });
+
+  function closeModal() {
+    modal.style.display = "none";
+  }
+
+  function confirmBuy() {
+    alert("Purchase confirmed! (This is a demo.)");
+    closeModal();
+  }
+</script>
+</body>
+
+</html>
