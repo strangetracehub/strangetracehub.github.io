@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sell an Item - Strange Trace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>List Your Item</h1></header>
+    <main>
+        <form action="/submit" method="post" enctype="multipart/form-data">
+            <label for="title">Item title:</label>
+            <input type="text" id="title" name="title" required><br>
+
+            <label for="desc">Description:</label>
+            <textarea id="desc" name="desc" required></textarea><br>
+
+            <label for="photo">Upload photo:</label>
+            <input type="file" id="photo" name="photo" accept="image/*"><br>
+
+            <label for="price">Price (£):</label>
+            <input type="number" id="price" name="price" required><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>
