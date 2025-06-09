@@ -1,35 +1,47 @@
 # Strange Trace
 
-**Strange Trace** is a discreet, no-nonsense marketplace where curiosity meets anonymity.  
-Buy and sell worn underwear without the noise — just raw desire and clean transactions.
+**Strange Trace** is an anonymous, minimalist marketplace for selling and browsing intimate items.
 
-## What is this?
+This site allows users to:
 
-An unfiltered space for buyers and sellers of intimate, pre-loved items.  
-Whether you're here to explore, to profit, or just to lurk — Strange Trace is where the strange feels natural.
-
-## Core Values
-
-- **Anonymity First** — No real names, no faces unless you choose.
-- **Simple UX** — No bloat. No distractions. Just listings, chats, and sales.
-- **No Shame** — We don't judge. You do you.
-
-## Planned Features
-
-- Account creation with anonymous handles  
-- Listings with photos, prices, and personal notes  
-- Buyer–Seller messaging system  
-- Ratings & trust system  
-- Payment gateway integration (Stripe or crypto)
-
-## Tech Stack (in progress)
-
-- **Frontend**: HTML, CSS, JavaScript  
-- **Backend**: Node.js or Django (to be decided)  
-- **Database**: MongoDB or PostgreSQL  
-- **Deployment**: GitHub Pages (frontend), Render/Vercel/Heroku (backend)
+- Post items without registration — a random seller nickname is generated automatically.
+- Upload preview photos, which are blurred by default.
+- Charge £1 for preview access and full item description.
+- Charge full price to unlock delivery instructions.
+- All content is treated as digital access — no refunds are supported.
 
 ---
 
-> **Strange is the new normal.**  
-> We just built the trace.
+## 🧠 How it works
+
+1. A visitor is assigned a unique nickname (e.g. `ShyBunny042`).
+2. They can list items by uploading photos and setting a price.
+3. Buyers see blurred previews with the option to **unlock for £1**.
+4. After unlocking, buyers can choose to **pay the full price**.
+5. A message informs them that:
+   > By proceeding, you agree to receive access to digital content and delivery terms.  
+   > All sales are final and non-refundable.
+
+---
+
+## 🔧 Tech stack
+
+- HTML/CSS/JS only (no backend)
+- Data is stored in `localStorage`
+- Fully static — ideal for GitHub Pages
+
+---
+
+## 📦 Future features
+
+- Stripe or crypto payment integration
+- Export/import saved items
+- Admin tools and moderation
+- Telegram or Matrix-based messaging (optional)
+
+---
+
+## 🚫 Disclaimer
+
+This platform is intended for educational and demonstration purposes only.  
+It simulates digital transactions and anonymous commerce without real financial processing.
