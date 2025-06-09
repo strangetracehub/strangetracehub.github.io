@@ -1,34 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sell Your Item</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <title>Sell Item - Strange Trace</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Sell an Item</h1>
-
-  <form id="sellForm">
-    <label>Title:</label>
-    <input type="text" id="title" required /><br/>
-
-    <label>Description:</label>
-    <textarea id="description" required></textarea><br/>
-
-    <label>Price (£):</label>
-    <input type="number" id="price" step="0.01" required /><br/>
-
-    <label>Upload image:</label>
-    <input type="file" id="image" accept="image/*" required /><br/>
-    <img id="previewImage" style="max-width: 100%; margin-top: 10px;" />
-
-    <button type="submit">Post Item</button>
-  </form>
-
-  <div id="previewArea"></div>
-
-  <script src="common.js"></script>
-  <script src="sell.js"></script>
+    <h2>Sell an Item</h2>
+    <p>Your nickname: <strong id="nickname">...</strong></p>
+    <form id="sell-form">
+        <input type="text" placeholder="Item title" required><br>
+        <textarea placeholder="Description" required></textarea><br>
+        <input type="file" accept="image/*" required><br>
+        <button type="submit">Submit</button>
+    </form>
+    <a href="index.html">Back</a>
+    <script src="common.js"></script>
+    <script src="sell.js"></script>
 </body>
 </html>
