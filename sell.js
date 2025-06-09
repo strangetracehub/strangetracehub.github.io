@@ -9,35 +9,60 @@ document.getElementById("sellForm").addEventListener("submit", function (e) {
 
     const reader = new FileReader();
     reader.onload = function () {
-        const imageData = reader.result;
+        const fullImageData = reader.result;
 
-        const item = {
-            title,
-            description,
-            price,
-            imageData,
-            seller,
-            timestamp: Date.now()
-        };
+        // Создаем размытую копию
+        createBlurredImage(imageInput.files[0], function (blurredImageData) {
+            const item = {
+                title,
+                description,
+                price,
+                imageFull: fullImageData,
+                imageBlurred: blurredImageData,
+                seller,
+                timestamp: Date.now()
+            };
 
-        const existing = JSON.parse(localStorage.getItem("items") || "[]");
-        existing.push(item);
-        localStorage.setItem("items", JSON.stringify(existing));
+            const existing = JSON.parse(localStorage.getItem("items") || "[]");
+            existing.push(item);
+            localStorage.setItem("items", JSON.stringify(existing));
 
-        alert("Item posted!");
-        document.getElementById("sellForm").reset();
-        document.getElementById("previewImage").src = "";
-        showPreview(item);
+            alert("Item posted!");
+            document.getElementById("sellForm").reset();
+            document.getElementById("previewImage").src = "";
+            showPreview(item);
+        });
     };
 
     reader.readAsDataURL(imageInput.files[0]);
 });
 
+function createBlurredImage(file, callback) {
+    const reader = new FileReader();
+    reader.onload = function (event) {
+        const img = new Image();
+        img.onload = function () {
+            const canvas = document.createElement("canvas");
+            canvas.width = img.width;
+            canvas.height = img.height;
+            const ctx = canvas.getContext("2d");
+
+            ctx.filter = "blur(15px)";
+            ctx.drawImage(img, 0, 0, img.width, img.height);
+
+            const blurredDataUrl = canvas.toDataURL("image/jpeg");
+            callback(blurredDataUrl);
+        };
+        img.src = event.target.result;
+    };
+    reader.readAsDataURL(file);
+}
+
 function showPreview(item) {
     const div = document.createElement("div");
     div.innerHTML = `
         <h3>${item.title}</h3>
-        <img src="${item.imageData}" width="200" />
+        <img src="${item.imageBlurred}" width="200" />
         <p>${item.description}</p>
         <p><strong>£${item.price.toFixed(2)}</strong> — Seller: ${item.seller}</p>
         <hr/>
