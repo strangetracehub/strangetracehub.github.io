@@ -26,6 +26,7 @@ document.getElementById("sellForm").addEventListener("submit", function (e) {
 
         alert("Item posted!");
         document.getElementById("sellForm").reset();
+        document.getElementById("previewImage").src = "";
         showPreview(item);
     };
 
@@ -43,3 +44,17 @@ function showPreview(item) {
     `;
     document.getElementById("previewArea").prepend(div);
 }
+
+document.getElementById("image").addEventListener("change", function () {
+    const preview = document.getElementById("previewImage");
+    const file = this.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            preview.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+    } else {
+        preview.src = "";
+    }
+});
